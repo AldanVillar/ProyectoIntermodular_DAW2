@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #394C83;
+    color: white;
+    text-align: justify;
+}
+
+.main > p{
+    padding: 0 80px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .header_nav {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header_nav .logo {
+    padding: 0;
+    border: none;
+    border: 2px solid black;
+}
+
+.header .header_nav a {
+    background-color: #2D2265;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    padding: 20px 26px;
+}
+
+.header .header_nav a:hover {
+    background-color: #394C83;
+    color: white;
+}
+
+.header .header_nav img{
+    background-color: #2D2265;
+    width: 130px;
+    height: 130px;
+}
+
+.header .header_nav img:hover{
+    background-color: #394C83;
+    width: 130px;
+    height: 130px;
+}
+
+.search {
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    margin-bottom: 60px;
+}
+
+.search > input{
+    width: 400px;
+    height: 30px;
+}
+
+.search > a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: #2D2265;
+    color: white;
+}
+
+.search > a:hover{
+    background-color: gray;
+    color: #2D2265;
+}
+
+.galeria-principal > img {
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-juego {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.game-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.img-main {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnails img {
+    width: 25%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-lateral {
+    background-color: #2D2265;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.mini-logo {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.compra-similares {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 120px;
+}
+
+.item-compra {
+    background: linear-gradient(90deg, #394C83, #2D2265);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-comprar {
+    background-color: #1a1535;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: white;
+    color: #2D2265;
+}
+
+.similares {
+    background-color: #2D2265;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.similares img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.caja-descripcion {
+    background-color: #2D2265;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.banner-desc {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.valoraciones {
+    margin-top: 30px;
+}
+
+.grid-valoraciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.review {
+    background-color: #2D2265;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    background-color: #2D2265;
+    height: 250px;
+    width: 100%;
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 380px;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.footerA {
+    color: rgb(164, 164, 164);
+}
+
+@media (max-width: 780px) {
+    .header .header_nav {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_nav > a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #2D2265;
+        bottom: 0;
+    }
+
+    .footer > div {
+        width: 100%;
+    }
+}

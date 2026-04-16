@@ -1,0 +1,249 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #394C83;
+    color: white;
+    text-align: justify;
+}
+
+.main > p{
+    padding: 0 80px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header_nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D2265;
+    border: 2px solid black;
+}
+
+.header_nav .logo {
+    padding: 0;
+    border: none;
+    border: 2px solid black;
+}
+
+.header_nav a {
+    text-decoration: none;
+    color: white;   
+    padding: 20px 26px;
+}
+
+.header_nav a:hover {
+    background-color: #394C83;
+    color: white;
+}
+
+.header_nav img{
+    background-color: #2D2265;
+    width: 130px;
+    height: 130px;
+}
+
+.header_nav img:hover{
+    background-color: #394C83;
+    width: 130px;
+    height: 130px;
+}
+
+.search {
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    margin-bottom: 60px;
+}
+
+.search > input{
+    width: 400px;
+    height: 30px;
+}
+
+.search > a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: #2D2265;
+    color: white;
+}
+
+.search > a:hover{
+    background-color: gray;
+    color: #2D2265;
+}
+
+.main {
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.juego {
+    background-color: #2D2265;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.juego > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.juego img {
+    border-radius: 10px;
+    margin: 20px;
+    height: 80%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.destacados h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.descuentos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.juegos-descuento {
+    display: flex;
+    background-color: #2D2265;
+    padding: 5px;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.juegos-descuento img {
+    transition: transform 0.3s ease;
+    height: 200px;
+    width: 33.33%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.juegos-descuento img:hover {
+    transform: scale(1.05);
+}
+
+.novedades h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.novedades ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #2D2265;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.novedades li {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+}
+
+.novedades li > img{
+    transition: transform 0.3s ease;
+    height: 150px;
+    width: 30%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.novedades li > img:hover{
+    transform: scale(1.05);
+}
+
+.novedades li > p {
+    width: 50%;
+    max-width: 800px;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    background-color: #2D2265;
+    height: 250px;
+    width: 100%;
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 380px;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.footerA {
+    color: rgb(164, 164, 164);
+}
+
+@media (max-width: 780px) {
+    .header .header_nav {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_nav > a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .novedades li > img{
+        width: 80%;
+    }
+
+    .novedades li > p {
+        width: 80%;
+    }
+
+    .novedades li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #2D2265;
+        bottom: 0;
+    }
+
+    .footer > div {
+        width: 100%;
+    }
+}
