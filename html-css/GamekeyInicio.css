@@ -29,16 +29,20 @@ body {
     border: 2px solid black;
 }
 
-.header_nav .logo {
-    padding: 0;
-    border: none;
-    border: 2px solid black;
-}
-
 .header_nav a {
     text-decoration: none;
     color: white;   
     padding: 20px 26px;
+}
+
+.header_nav .logo {
+    padding: 0;
+    border: none;
+}
+
+.header_nav  .logo > img{
+    width: 60px;
+    height: 60px;
 }
 
 .header_nav a:hover {
@@ -54,8 +58,6 @@ body {
 
 .header_nav img:hover{
     background-color: #394C83;
-    width: 130px;
-    height: 130px;
 }
 
 .search {
@@ -106,11 +108,16 @@ body {
 }
 
 .juego img {
+    transition: transform 0.3s ease;
     border-radius: 10px;
     margin: 20px;
     height: 80%;
     width: 50%;
     overflow: hidden;
+}
+
+.juego img:hover {
+    transform: scale(1.05);
 }
 
 .destacados h2 {
