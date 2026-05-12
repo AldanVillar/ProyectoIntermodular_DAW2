@@ -20,42 +20,44 @@ body {
     z-index: 100;
 }
 
-.header .header_nav {
+.header_nav {
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-.header .header_nav .logo {
-    padding: 0;
-    border: none;
-    border: 2px solid black;
-}
-
-.header .header_nav a {
     background-color: #2D2265;
-    text-decoration: none;
-    color: white;
     border: 2px solid black;
+}
+
+.header_nav a {
+    text-decoration: none;
+    color: white;   
     padding: 20px 26px;
 }
 
-.header .header_nav a:hover {
+.header_nav .logo {
+    padding: 0;
+    border: none;
+}
+
+.header_nav  .logo > img{
+    width: 60px;
+    height: 60px;
+}
+
+.header_nav a:hover {
     background-color: #394C83;
     color: white;
 }
 
-.header .header_nav img{
+.header_nav img{
     background-color: #2D2265;
     width: 130px;
     height: 130px;
 }
 
-.header .header_nav img:hover{
+.header_nav img:hover{
     background-color: #394C83;
-    width: 130px;
-    height: 130px;
 }
 
 .search {
