@@ -1,21 +1,68 @@
 .search {
     position: relative;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
+
+.search > input {
+    width: 520px;
+    height: 46px;
+    padding: 0 18px;
+    border: 2px solid #352a74;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    background-color: #1e1650;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search > input::placeholder {
+    color: #8880b0;
+}
+
+.search > input:focus {
+    border-color: #7b6dcc;
+}
+
+.search > a {
+    width: 50px;
+    height: 46px;
+    border: 2px solid #352a74;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #352a74;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    transition: background-color 0.2s ease;
+}
+
+.search > a:hover {
+    background-color: #4a3d9c;
+    color: white;
+}
+
+/* ── Dropdown ── */
 
 .buscador-dropdown {
     display: none;
     position: absolute;
-    top: 30px;
+    top: 46px;
     right: 0;
-    width: 432px;
+    width: 572px;
     background-color: #2D2265;
-    border: 1px solid #394C83;
+    border: 2px solid #352a74;
     border-top: none;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 12px 12px;
     z-index: 300;
-    max-height: 420px;
+    max-height: 440px;
     overflow-y: auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
 }
 
 .buscador-dropdown.visible {
@@ -26,10 +73,10 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 10px 14px;
+    padding: 12px 16px;
     text-decoration: none;
     color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     transition: background-color 0.15s ease;
 }
 
@@ -42,10 +89,10 @@
 }
 
 .buscador-resultado img {
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 46px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 6px;
     flex-shrink: 0;
 }
 
@@ -53,11 +100,11 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
 }
 
 .buscador-resultado .buscador-titulo {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -67,14 +114,14 @@
 }
 
 .buscador-resultado .buscador-precio {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #a8c4ff;
     white-space: nowrap;
 }
 
 .buscador-sin-resultados {
-    padding: 16px;
+    padding: 18px;
     color: #d0d0d0;
     font-size: 14px;
     text-align: center;

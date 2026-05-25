@@ -53,6 +53,7 @@ function ocultarDropdown() {
 function iniciarBuscador() {
     const searchDiv = document.querySelector('.search');
     const input = searchDiv.querySelector('input');
+    input.placeholder = 'Buscar juego...';
 
     const dropdown = document.createElement('div');
     dropdown.id = 'buscador-dropdown';
