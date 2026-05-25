@@ -1,0 +1,81 @@
+.search {
+    position: relative;
+}
+
+.buscador-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 432px;
+    background-color: #2D2265;
+    border: 1px solid #394C83;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    z-index: 300;
+    max-height: 420px;
+    overflow-y: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.buscador-dropdown.visible {
+    display: block;
+}
+
+.buscador-resultado {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.15s ease;
+}
+
+.buscador-resultado:last-child {
+    border-bottom: none;
+}
+
+.buscador-resultado:hover {
+    background-color: #394C83;
+}
+
+.buscador-resultado img {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.buscador-resultado .buscador-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.buscador-resultado .buscador-titulo {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.buscador-resultado .buscador-meta {
+    font-size: 12px;
+    color: #d0d0d0;
+}
+
+.buscador-resultado .buscador-precio {
+    font-size: 13px;
+    font-weight: 600;
+    color: #a8c4ff;
+    white-space: nowrap;
+}
+
+.buscador-sin-resultados {
+    padding: 16px;
+    color: #d0d0d0;
+    font-size: 14px;
+    text-align: center;
+}
