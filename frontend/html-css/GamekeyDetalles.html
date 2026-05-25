@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gamekey - Detalles</title>
     <link rel="stylesheet" href="GamekeyDetalles.css">
+    <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Cabecera-->
     <header class="header">
-
-        <!--Menú de navegación-->
         <nav class="header_nav">
             <a href="GamekeyInicio.html" class="logo"><img src="img/gamekey.png" alt="gk"></a>
             <a href="GamekeyDestacados.html">DESTACADOS</a>
@@ -28,11 +27,11 @@
     </div>
 
     <main class="main">
-        <h1 class="titulo-juego">GUILTY GEAR Xrd REV 2</h1>
+        <h1 class="titulo-juego" id="titulo-juego"></h1>
 
         <section class="game-top">
             <div class="galeria-principal">
-                <img src="img/ggxrd.jpg" alt="Principal" class="img-main">
+                <img id="img-principal" src="" alt="" class="img-main">
                 <div class="thumbnails">
                     <img src="img/desc1.jpg" alt="1">
                     <img src="img/desc2.jpg" alt="2">
@@ -41,43 +40,21 @@
                 </div>
             </div>
 
-            <div class="info-lateral">
-                <img src="img/ggxrdlogo.jpg" alt="Logo" class="mini-logo">
-                <p>Astonishing 3D cell animations and overwhelming content volume, the next-generation fighting game "GUILTY GEAR Xrd REV 2" is now out on Steam! Total cast of 25 unique characters, and tons of game modes, get ready to ROCK!</p>
-            </div>
+            <div class="info-lateral" id="info-lateral"></div>
         </section>
 
         <section class="compra-similares">
-            <div class="opciones-compra">
-                <div class="item-compra">
-                    <span>Comprar GUILTY GEAR Xrd REV 2</span>
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-                <div class="item-compra">
-                    <span>Comprar GUILTY GEAR Xrd REV 2 Deluxe Edition</span>
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-                <div class="item-compra">
-                    <span>Comprar ASW Essential titles bundle</span>
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-            </div>
+            <div class="opciones-compra" id="opciones-compra"></div>
 
             <aside class="similares">
                 <h3>Similares:</h3>
-                <img src="img/sf6.avif" alt="Street Fighter">
-                <img src="img/tekken7.jpg" alt="Tekken">
+                <div id="similares-imgs"></div>
             </aside>
         </section>
 
         <section class="descripcion-avanzada">
-            <h2>DESCRIPCIÓN AVANZADA</h2>
-            <div class="caja-descripcion">
-                <h3>• Apartado 1</h3>
-                <p>Get ready to rock again! Guilty Gear Xrd REV 2 includes new fighters, moves, story chapters and more! It’s never been a better time to be a 2.5D brawler in the post apocalypse!
-                Hone your skills with an eclectic cast of 25 insane fighters and prove your mettle as the ultimate fighting master.</p>
-                <img src="img/ggxrdlogo.jpg" alt="Banner" class="banner-desc">
-            </div>
+            <h2>DESCRIPCION AVANZADA</h2>
+            <div class="caja-descripcion" id="descripcion-contenido"></div>
         </section>
 
         <section class="valoraciones">
@@ -105,17 +82,19 @@
         <div class="footer">
             <div>
                 <h2>Gamekey</h2>
-                <p>Gamekey, ofrece a jugadores como tú grandes ahorros en juegos, suscripciones, recargas y mucho más. Explora más de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu próximo juego favorito.</p>
+                <p>Gamekey, ofrece a jugadores como tu grandes ahorros en juegos, suscripciones, recargas y mucho mas.</p>
             </div>
             <div>
-                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></h2>
+                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></h2>
             </div>
             <div>
-                <h2>Atención Al Cliente</h2>
+                <h2>Atencion Al Cliente</h2>
                 <a href="#" class="footerA">Centro de ayuda</a>
                 <a href="#" class="footerA">Solicitar asistencia</a>
             </div>
         </div>
     </footer>
+
+    <script src="js/detalles.js"></script>
 </body>
 </html>

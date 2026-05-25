@@ -3,160 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gamekey - Top Ventas</title>
     <link rel="stylesheet" href="GamekeyTopVentas.css">
+    <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!--Cabecera-->
-        <header class="header">
+    <!--Cabecera-->
+    <header class="header">
+        <!--Menu de navegacion-->
+        <nav class="header_nav">
+            <a href="GamekeyInicio.html" class="logo"><img src="img/gamekey.png" alt="gk"></a>
+            <a href="GamekeyDestacados.html">DESTACADOS</a>
+            <a href="GamekeyTopVentas.html">TOP VENTAS</a>
+            <a href="GamekeyDetalles.html">DETALLES</a>
+            <a href="GamekeyNoticias.html">NOTICIAS</a>
+            <a href="#">Carro</a>
+        </nav>
+    </header>
 
-            <!--Menú de navegación-->
-            <nav class="header_nav">
-                <a href="GamekeyInicio.html" class="logo"><img src="img/gamekey.png" alt="gk"></a>
-                <a href="GamekeyDestacados.html">DESTACADOS</a>
-                <a href="GamekeyTopVentas.html">TOP VENTAS</a>
-                <a href="GamekeyDetalles.html">DETALLES</a>
-                <a href="GamekeyNoticias.html">NOTICIAS</a>
-                <a href="#">Carro</a>
-            </nav>
-        </header>
-
-        <!--Top ventas-->
-        <!DOCTYPE html>
-
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gamekey - Top Ventas</title>
-        <link rel="stylesheet" href="GamekeyTopVentas.css">
-        <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
-    </head>
-
-    <body>
-
-    <!-- BUSCADOR -->
-
+    <!--Busqueda-->
     <div class="search">
         <input type="text" placeholder="Buscar...">
         <a href="#"><i class="fas fa-magnifying-glass"></i></a>
     </div>
 
-    <!-- CONTENIDO -->
-
+    <!--Contenido-->
     <main class="ventas">
         <h1 class="titulo">MAS VENDIDOS ESTE MES</h1>
+        <section class="lista" id="ventas-mes"></section>
 
-        <section class="lista">
-            <div class="juego">
-                <img src="img/isaac.jpg">
-                <div>
-                    <h3>The binding of Isaac</h3>
-                    <p>The Binding of Isaac: Rebirth es un videojuego de acción roguelike de mazmorras...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/vambrance.jpg">
-                <div>
-                    <h3>Vambrace: Cold Soul</h3>
-                    <p>Vambrace: Cold Soul es un videojuego de rol de exploración de mazmorras...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/celeste.avif">
-                <div>
-                    <h3>Celeste</h3>
-                    <p>Celeste es un videojuego perteneciente al género de plataformas...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/expedition.jpg">
-                <div>
-                    <h3>Expedition 33</h3>
-                    <p>Clair Obscur: Expedition 33 es un videojuego de rol de fantasía oscura...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/castle.jpg">
-                <div>
-                    <h3>Castle crashers</h3>
-                    <p>Castle Crashers es un videojuego desarrollado por The Behemoth...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/l4d2.jpg">
-                <div>
-                    <h3>Left 4 dead 2</h3>
-                    <p>Left 4 Dead 2 es un videojuego de terror de disparos en primera persona...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/pvz.jpg">
-                <div>
-                    <h3>Plants vs Zombies</h3>
-                    <p>Plants vs Zombies es un videojuego de defensa de torres...</p>
-                </div>
-            </div>
-        </section>
-
-        <h1 class="titulo">MAS VENDIDOS ESTE AÑO</h1>
-
-        <section class="lista">
-            <div class="juego">
-                <img src="img/nier.jpg">
-                <div>
-                    <h3>Nier:Automata</h3>
-                    <p>Nier:Automata es un videojuego de rol de acción desarrollado por PlatinumGames...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/ds3.jpg">
-                <div>
-                    <h3>Dark Souls III</h3>
-                    <p>Dark Souls III es un videojuego de rol de acción desarrollado por FromSoftware...</p>
-                </div>
-            </div>
-
-            <div class="juego">
-                <img src="img/beyond.jpg">
-                <div>
-                    <h3>Beyond two Souls</h3>
-                    <p>Beyond: Two Souls es un videojuego de drama interactivo...</p>
-                </div>
-            </div>
-            
-            <div class="juego">
-                <img src="img/cyberpunk.jfif">
-                <div>
-                    <h3>Cyberpunk 2077</h3>
-                    <p>Cyberpunk 2077 es un videojuego de rol de acción en mundo abierto...</p>
-                </div>
-            </div>
-        </section>
+        <h1 class="titulo">MAS VENDIDOS ESTE ANO</h1>
+        <section class="lista" id="ventas-anio"></section>
     </main>
+
     <footer>
         <div class="footer">
             <div>
                 <h2>Gamekey</h2>
-                <p>Gamekey, ofrece a jugadores como tú grandes ahorros en juegos, suscripciones, recargas y mucho más. Explora más de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu próximo juego favorito.</p>
+                <p>Gamekey, ofrece a jugadores como tu grandes ahorros en juegos, suscripciones, recargas y mucho mas. Explora mas de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu proximo juego favorito.</p>
             </div>
             <div>
-                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></h2>
+                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></h2>
             </div>
             <div>
-                <h2>Atención Al Cliente</h2>
+                <h2>Atencion Al Cliente</h2>
                 <a href="#" class="footerA">Centro de ayuda</a>
                 <a href="#" class="footerA">Solicitar asistencia</a>
             </div>
         </div>
     </footer>
+
+    <script src="js/topventas.js"></script>
 </body>
 </html>

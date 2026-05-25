@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gamekey - Destacados</title>
     <link rel="stylesheet" href="GamekeyDestacados.css">
+    <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Cabecera-->
     <header class="header">
-
-        <!--Menú de navegación-->
+        <!--Menu de navegacion-->
         <nav class="header_nav">
             <a href="GamekeyInicio.html" class="logo"><img src="img/gamekey.png" alt="gk"></a>
             <a href="GamekeyDestacados.html">DESTACADOS</a>
@@ -27,19 +27,12 @@
         <a href="#" class="glass"><i class="fas fa-magnifying-glass"></i></a>
     </div>
 
-            <!--Contenido principal-->
+    <!--Contenido principal-->
     <main class="main">
         <!--Destacados-->
         <section class="destacados">
             <h2>Destacados</h2>
-            <div class="juegosDestacados">
-                <img src="img/p4.avif" alt="p4">
-                <div>
-                    <img src="img/fearHunger.jpg" alt="fearHunger">
-                    <img src="img/lunacid.jpg" alt="lunacid">
-                    <img src="img/metaphor.avif" alt="metaphor">
-                </div>
-            </div>
+            <div class="juegosDestacados" id="juegos-destacados-grid"></div>
         </section>
 
         <!--Desarrolladora-->
@@ -54,35 +47,8 @@
         <section class="popular">
             <h2>Popular Recientemente</h2>
             <div class="popularRecientemente">
-                <div class="completos">
-                    <div>
-                        <img src="img/silksong.avif" alt="silksong">
-                        <p><strong>Hollow Knight: Silksong:</strong> <br> Hollow Knight Silksong es un videojuego metroidvania desarrollado por el estudio independiente australiano Team Cherry​. Es la secuela del videojuego de 2017 Hollow Knight​</p>
-                    </div>
-                    <div>
-                        <img src="img/duck.jpg" alt="duck">
-                        <p><strong>Duck game:</strong> <br> Duck Game es un videojuego de acción desarrollado por Landon Podbielski y distribuido por Adult Swim Games. El juego fue lanzado para Ouya en 2014, y para Microsoft Windows en 2015.</p>
-                    </div>
-                    <div>
-                        <img src="img/forHonor.avif" alt="forHonor">
-                        <p><strong>For honor:</strong> <br> For Honor es un videojuego de acción en tercera persona que destacó por su sistema de combate tridireccional. Ha sido desarrollado por Ubisoft Montreal y distribuido por Ubisoft para las plataformas Microsoft Windows, PlayStation 4 y Xbox One. </p>
-                    </div>
-                    <div>
-                        <img src="img/ff7.jpg" alt="ff7">
-                        <p><strong>Final Fantasy VII:</strong> <br> Final Fantasy VII Remake es un videojuego de rol de acción, publicado por la empresa Square Enix inicialmente para la plataforma PlayStation 4, que fue lanzado el 10 de abril de 2020.​</p>
-                    </div>
-                    <div>
-                        <img src="img/nonexistence.jpg" alt="nonexistence">
-                        <p><strong>The NOexistenceN of you AND me:</strong> <br> Usa el "juego" como medio para mostrar tu mundo. Explora la verdad de tu mundo a través de una novela visual.</p>
-                    </div>
-                </div>
-                <div class="portadas">
-                    <img src="img/monster.jpg" alt="monster">
-                    <img src="img/forest.jpg" alt="forest">
-                    <img src="img/dmcHD.jpg" alt="dmcHD">
-                    <img src="img/skyrim.jpg" alt="skyrim">
-                    <img src="img/ggxrd.jpg" alt="ggxrd">
-                </div>
+                <div class="completos" id="completos"></div>
+                <div class="portadas" id="portadas"></div>
             </div>
         </section>
     </main>
@@ -91,17 +57,19 @@
         <div class="footer">
             <div>
                 <h2>Gamekey</h2>
-                <p>Gamekey, ofrece a jugadores como tú grandes ahorros en juegos, suscripciones, recargas y mucho más. Explora más de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu próximo juego favorito.</p>
+                <p>Gamekey, ofrece a jugadores como tu grandes ahorros en juegos, suscripciones, recargas y mucho mas. Explora mas de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu proximo juego favorito.</p>
             </div>
             <div>
-                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></h2>
+                <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></h2>
             </div>
             <div>
-                <h2>Atención Al Cliente</h2>
+                <h2>Atencion Al Cliente</h2>
                 <a href="#" class="footerA">Centro de ayuda</a>
                 <a href="#" class="footerA">Solicitar asistencia</a>
             </div>
         </div>
     </footer>
+
+    <script src="js/destacados.js"></script>
 </body>
 </html>
