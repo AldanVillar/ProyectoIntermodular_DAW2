@@ -96,41 +96,57 @@ body {
     background-color: #2D2265;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.juegosDestacados > div {
-    display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 24px;
 }
 
-.juegosDestacados > img {
-    transition: transform 0.3s ease;
-    margin-top: 50px;
-    width: 90%;
-    max-width: 1000px;
-    height: 500px;
+.juegosDestacados a {
+    flex-shrink: 0;
+}
+
+.juegosDestacados img {
+    width: 420px;
+    height: 270px;
+    object-fit: cover;
     border-radius: 10px;
-}
-
-.juegosDestacados > img:hover {
-    transform: scale(1.05);
-}
-
-.juegosDestacados > div > img {
+    display: block;
     transition: transform 0.3s ease;
-    width: 30%;
-    max-width: 300px;
-    height: 150px;
-    border-radius: 10px;
-    margin: 10px;
 }
 
-.juegosDestacados > div > img:hover {
-    transform: scale(1.05);
+.juegosDestacados img:hover {
+    transform: scale(1.03);
+}
+
+.juegosDestacados .info-destacado {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.juegosDestacados .info-destacado h3 {
+    font-size: 1.6em;
+}
+
+.juegosDestacados .info-destacado p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+.juegosDestacados .precio-actual {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #a8c4ff;
+}
+
+.juegosDestacados .precio-tachado {
+    font-size: 1em;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 8px;
 }
 
 .desarrolladoraDestacada {

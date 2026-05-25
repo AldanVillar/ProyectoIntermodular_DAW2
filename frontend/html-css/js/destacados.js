@@ -4,24 +4,29 @@ function truncar(texto, max = 130) {
     return texto.length > max ? texto.slice(0, max) + '...' : texto;
 }
 
+function precioHTML(juego) {
+    if (juego.precio_original) {
+        return `<span class="precio-tachado">${juego.precio_original} €</span>
+                <span class="precio-actual">${juego.precio} €</span>`;
+    }
+    return `<span class="precio-actual">${juego.precio} €</span>`;
+}
+
 async function cargarDestacados() {
     const res = await fetch(`${API}/juegos/?destacado=true`);
     const juegos = await res.json();
     if (!juegos.length) return;
 
-    const grande = juegos[0];
-    const pequenos = juegos.slice(1, 4);
+    const j = juegos[0];
 
     document.getElementById('juegos-destacados-grid').innerHTML = `
-        <a href="GamekeyDetalles.html?id=${grande.id}">
-            <img src="img/${grande.imagen}" alt="${grande.titulo}">
+        <a href="GamekeyDetalles.html?id=${j.id}">
+            <img src="img/${j.imagen}" alt="${j.titulo}">
         </a>
-        <div>
-            ${pequenos.map(j => `
-                <a href="GamekeyDetalles.html?id=${j.id}">
-                    <img src="img/${j.imagen}" alt="${j.titulo}">
-                </a>
-            `).join('')}
+        <div class="info-destacado">
+            <h3>${j.titulo}</h3>
+            <p>${truncar(j.descripcion, 220)}</p>
+            <p>${precioHTML(j)}</p>
         </div>
     `;
 }
