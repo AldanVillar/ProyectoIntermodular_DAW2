@@ -1,5 +1,7 @@
 const API = 'http://127.0.0.1:8000/api';
 
+let juegoActual = null;
+
 function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
 }
@@ -34,6 +36,8 @@ async function cargarDetalles() {
 }
 
 function renderJuego(j) {
+    juegoActual = j;
+
     document.getElementById('titulo-juego').textContent = j.titulo.toUpperCase();
 
     document.getElementById('img-principal').src = `img/${j.imagen}`;
@@ -50,15 +54,52 @@ function renderJuego(j) {
     document.getElementById('opciones-compra').innerHTML = `
         <div class="item-compra">
             <span>Comprar ${j.titulo} &nbsp; ${precioHTML(j)}</span>
-            <button class="btn-comprar">COMPRAR</button>
+            <button class="btn-comprar" id="btn-comprar">COMPRAR</button>
         </div>
     `;
+
+    document.getElementById('btn-comprar').addEventListener('click', () => agregarAlCarrito(juegoActual));
 
     document.getElementById('descripcion-contenido').innerHTML = `
         <h3>• Descripción</h3>
         <p>${j.descripcion}</p>
         <p><strong>Stock disponible:</strong> ${j.stock} unidades</p>
     `;
+}
+
+function agregarAlCarrito(juego) {
+    const carrito = JSON.parse(localStorage.getItem('gamekey_carrito') || '[]');
+    const yaExiste = carrito.some(j => j.id === juego.id);
+
+    if (yaExiste) {
+        mostrarNotificacion(`"${juego.titulo}" ya está en tu carrito`);
+        return;
+    }
+
+    carrito.push({
+        id: juego.id,
+        titulo: juego.titulo,
+        precio: juego.precio,
+        precio_original: juego.precio_original || null,
+        imagen: juego.imagen,
+        plataforma: juego.plataforma ? juego.plataforma.nombre : 'PC'
+    });
+
+    localStorage.setItem('gamekey_carrito', JSON.stringify(carrito));
+    actualizarBadgeCarrito();
+    mostrarNotificacion(`"${juego.titulo}" añadido al carrito`);
+}
+
+function mostrarNotificacion(mensaje) {
+    const notif = document.createElement('div');
+    notif.className = 'notif-carrito';
+    notif.textContent = mensaje;
+    document.body.appendChild(notif);
+    setTimeout(() => notif.classList.add('visible'), 10);
+    setTimeout(() => {
+        notif.classList.remove('visible');
+        setTimeout(() => notif.remove(), 400);
+    }, 2500);
 }
 
 async function cargarSimilares(generoId, juegoActualId) {

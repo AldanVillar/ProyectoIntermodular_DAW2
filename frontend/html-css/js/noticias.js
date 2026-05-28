@@ -17,7 +17,6 @@ async function cargarNoticias() {
                 <span class="fecha">${formatearFecha(n.fecha)}</span>
                 <h2>${n.titulo}</h2>
                 <p>${n.contenido}</p>
-                <a href="#" class="leer-mas">Leer más...</a>
             </div>
         </article>
     `).join('');

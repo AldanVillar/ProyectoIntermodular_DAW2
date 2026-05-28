@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamekey - Top Ventas</title>
-    <link rel="stylesheet" href="GamekeyTopVentas.css">
+    <title>Gamekey - Carrito</title>
+    <link rel="stylesheet" href="GamekeyCarrito.css">
     <link rel="stylesheet" href="buscador.css">
     <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Cabecera-->
     <header class="header">
-        <!--Menu de navegacion-->
         <nav class="header_nav">
             <a href="GamekeyInicio.html" class="logo"><img src="img/gamekey.png" alt="gk"></a>
             <a href="GamekeyDestacados.html">DESTACADOS</a>
@@ -22,32 +20,35 @@
         </nav>
     </header>
 
-    <!--Busqueda-->
-    <div class="search">
-        <input type="text" placeholder="Buscar...">
-        <a href="#"><i class="fas fa-magnifying-glass"></i></a>
-    </div>
-
-    <!--Contenido-->
-    <main class="ventas">
-        <h1 class="titulo">MAS VENDIDOS ESTE MES</h1>
-        <section class="lista" id="ventas-mes"></section>
-
-        <h1 class="titulo">MAS VENDIDOS ESTE ANO</h1>
-        <section class="lista" id="ventas-anio"></section>
+    <main class="main-carrito">
+        <h1 class="titulo-carrito">Tu Carrito</h1>
+        <div class="carrito-layout">
+            <section class="lista-carrito" id="lista-carrito"></section>
+            <aside id="resumen-carrito"></aside>
+        </div>
     </main>
+
+    <div class="overlay-compra" id="overlay-compra">
+        <div class="modal-compra">
+            <i class="fas fa-check-circle icono-check"></i>
+            <h2>¡Compra realizada!</h2>
+            <p>Tu pedido ha sido procesado correctamente.</p>
+            <p>Recibirás tus claves de activación en breve.</p>
+            <a href="GamekeyInicio.html" class="btn-volver-inicio">Volver al inicio</a>
+        </div>
+    </div>
 
     <footer>
         <div class="footer">
             <div>
                 <h2>Gamekey</h2>
-                <p>Gamekey, ofrece a jugadores como tu grandes ahorros en juegos, suscripciones, recargas y mucho mas. Explora mas de 15 000 juegos de PC, Xbox, PlayStation y Nintendo y encuentra tu proximo juego favorito.</p>
+                <p>Gamekey, ofrece a jugadores como tú grandes ahorros en juegos, suscripciones, recargas y mucho más.</p>
             </div>
             <div>
                 <h2>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></h2>
             </div>
             <div>
-                <h2>Atencion Al Cliente</h2>
+                <h2>Atención Al Cliente</h2>
                 <a href="#" class="footerA">Centro de ayuda</a>
                 <a href="#" class="footerA">Solicitar asistencia</a>
             </div>
@@ -55,7 +56,6 @@
     </footer>
 
     <script src="js/carrito-nav.js"></script>
-    <script src="js/topventas.js"></script>
-    <script src="js/buscador.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 </html>

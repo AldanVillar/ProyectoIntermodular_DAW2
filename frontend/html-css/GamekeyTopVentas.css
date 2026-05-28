@@ -166,12 +166,17 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
     }
 
     .header_nav > a{
         width: 100%;
         text-align: center;
+    }
+
+    .ventas {
+        width: 100%;
+        padding: 0 15px;
     }
 
     .footer {

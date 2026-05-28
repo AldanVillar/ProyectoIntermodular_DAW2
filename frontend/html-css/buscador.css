@@ -126,3 +126,48 @@
     font-size: 14px;
     text-align: center;
 }
+
+/* ── Badge del carrito en el nav ── */
+.cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    padding: 0 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.cart-badge:empty {
+    display: none;
+}
+
+/* ── Toast de confirmación de carrito ── */
+.notif-carrito {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2D2265;
+    border: 1px solid #4a3d9c;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    z-index: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.notif-carrito.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
